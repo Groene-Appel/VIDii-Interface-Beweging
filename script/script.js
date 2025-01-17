@@ -7,7 +7,24 @@ var animation = bodymovin.loadAnimation({
 });
 
 
+// Callback voor wanneer de eerste animatie klaar is
+animation.addEventListener('complete', function () {
+    // Laad de tweede animatie (1_intro_loop.json) nadat de eerste is voltooid
+    loadSecondAnimation();
+});
 
+
+// Functie om de tweede animatie te laden
+function loadSecondAnimation() {
+    animation.destroy(); // Vernietig de huidige animatie
+    animation = bodymovin.loadAnimation({
+        container: document.getElementById('anim'),
+        renderer: 'svg',
+        loop: true, // De tweede animatie blijft herhalen
+        autoplay: true,
+        path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/1_intro_loop.json'
+    });
+}
 
 
 
