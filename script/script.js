@@ -24,7 +24,7 @@ function loadSecondAnimation() {
         autoplay: true,
         path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/1_intro_loop.json'
     });
-}
+};
 
 
 
