@@ -78,6 +78,18 @@ function startVerhaal() {
         });
 
 
+        // Functie om de blixem_loop animatie te laden
+        function loadBlixemLoopAnimation() {
+        animation.destroy(); // Vernietig de huidige animatie
+        animation = bodymovin.loadAnimation({
+        container: document.getElementById('anim'),
+        renderer: 'svg',
+        loop: true, // Blixem_loop animatie blijft herhalen
+        autoplay: true,
+        path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem_loop/2_blixem_loop.json'
+        });}
+
+
         // Update de knop
         animatieButton.textContent = 'Animatie 1';
         huidigeToestand = 1;
@@ -157,16 +169,6 @@ function startVerhaal() {
 }
 
 
-// Functie om de blixem_loop animatie te laden
-function loadBlixemLoopAnimation() {
-    animation.destroy(); // Vernietig de huidige animatie
-    animation = bodymovin.loadAnimation({
-    container: document.getElementById('anim'),
-    renderer: 'svg',
-    loop: true, // Blixem_loop animatie blijft herhalen
-    autoplay: true,
-    path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem_loop.json'
-    });}
 
 
 
