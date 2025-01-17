@@ -68,7 +68,7 @@ function startVerhaal() {
             renderer: 'svg',
             loop: true, // Blixem animatie blijft herhalen
             autoplay: true,
-            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem_loop.json'
+            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/4_verdamping.json'
         });
 
 
