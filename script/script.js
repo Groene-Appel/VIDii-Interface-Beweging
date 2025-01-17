@@ -66,7 +66,7 @@ function startVerhaal() {
         animation = bodymovin.loadAnimation({
             container: document.getElementById('anim'),
             renderer: 'svg',
-            loop: true, // Blixem animatie blijft herhalen
+            loop: false, // Blixem animatie blijft herhalen
             autoplay: true,
             path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem/2_blixem.json'
         });
@@ -81,17 +81,53 @@ function startVerhaal() {
         vervangendeTekst.textContent = 'Gelukkig, er zit weer wat leven in blub, maar blub gaat veelste snel';
         animatieButton.textContent = 'Animatie 2';
 
+
+
+        //animtie 3
+        animation.destroy(); // Vernietig de huidige animatie
+        animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim'),
+            renderer: 'svg',
+            loop: false, // Blixem animatie blijft herhalen
+            autoplay: true,
+            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/3_frozen/3_frozen.json'
+        });
+
+
+
         huidigeToestand = 2;
         
+
+
     } else if (huidigeToestand === 2) {
         vervangendeTekst.textContent = 'Blub is nu vast, laten het ijs opwarmen';
         animatieButton.textContent = 'Animatie 3';
+
+        //animtie 2
+        animation.destroy(); // Vernietig de huidige animatie
+        animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim'),
+            renderer: 'svg',
+            loop: false, // Blixem animatie blijft herhalen
+            autoplay: true,
+            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/4_verdamping/4_verdamping.json'
+        });
 
         huidigeToestand = 3;
 
     } else if (huidigeToestand === 3) {
         vervangendeTekst.textContent = 'O nee, al het waterverdampt, snel voordat blub geen zuurstof meer heeft';
         animatieButton.textContent = 'Animatie 4';
+
+        //animtie 2
+        animation.destroy(); // Vernietig de huidige animatie
+        animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim'),
+            renderer: 'svg',
+            loop: false, // Blixem animatie blijft herhalen
+            autoplay: true,
+            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/5_regen/5_regen.json'
+        });
 
         huidigeToestand = 4;
         
