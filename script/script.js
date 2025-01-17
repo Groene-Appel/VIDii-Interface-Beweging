@@ -72,10 +72,28 @@ function startVerhaal() {
         });
 
 
+        // Callback voor het einde van de blixem animatie
+        animation.addEventListener('complete', function () {
+        loadBlixemLoopAnimation(); // Laad de blixem_loop animatie
+        });
+
+
+        // Functie om de blixem_loop animatie te laden
+        function loadBlixemLoopAnimation() {
+        animation.destroy(); // Vernietig de huidige animatie
+        animation = bodymovin.loadAnimation({
+        container: document.getElementById('anim'),
+        renderer: 'svg',
+        loop: true, // Blixem_loop animatie blijft herhalen
+        autoplay: true,
+        path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem_loop.json'
+        });}
+
 
         // Update de knop
         animatieButton.textContent = 'Animatie 1';
         huidigeToestand = 1;
+
         
     } else if (huidigeToestand === 1) {
         vervangendeTekst.textContent = 'Gelukkig, er zit weer wat leven in blub, maar blub gaat veelste snel';
@@ -149,6 +167,12 @@ function startVerhaal() {
      }, 0); // Duur van de fade-in animatie
  }, 0); // Duur van de fade-out animatie
 }
+
+
+
+
+
+
 
 // Voeg de event listener toe aan de knop
 animatieButton.addEventListener('click', startVerhaal);
