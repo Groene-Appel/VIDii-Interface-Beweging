@@ -22,7 +22,7 @@ function loadSecondAnimation() {
         renderer: 'svg',
         loop: true, // De tweede animatie blijft herhalen
         autoplay: true,
-        path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/1_intro_loop.json'
+        path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/1_intro_loop/1_intro_loop.json'
     });
 };
 
@@ -68,7 +68,7 @@ function startVerhaal() {
             renderer: 'svg',
             loop: true, // Blixem animatie blijft herhalen
             autoplay: true,
-            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/4_verdamping.json'
+            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem/2_blixem.json'
         });
 
 
