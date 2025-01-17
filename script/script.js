@@ -1,14 +1,10 @@
-// var animation = bodymovin.loadAnimation({
-//     container: document.getElementById('anim'),
-//     rederer: 'svg',
-//     loop: true,
-//     autoplay: true,
-//     path:'./script/1_intro.json'
-// });
-
-
-
-
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('anim'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path:'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/1_intro.json'
+});
 
 
 
