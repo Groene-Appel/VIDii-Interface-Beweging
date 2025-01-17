@@ -33,6 +33,10 @@ function loadSecondAnimation() {
 var verhaalTekst = document.querySelector('h1');
 var animatieButton = document.querySelector('button');
 
+
+
+
+
 //huidige toestand
 var huidigeToestand = 0;
 
@@ -56,9 +60,21 @@ function startVerhaal() {
 
         verhaalTekst = vervangendeTekst;
 
+
+        //animtie 2
+        animation.destroy(); // Vernietig de huidige animatie
+        animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim'),
+            renderer: 'svg',
+            loop: true, // Blixem animatie blijft herhalen
+            autoplay: true,
+            path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_Blixem.json'
+        });
+
+
+
         // Update de knop
         animatieButton.textContent = 'Animatie 1';
-
         huidigeToestand = 1;
         
     } else if (huidigeToestand === 1) {
