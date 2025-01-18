@@ -30,22 +30,22 @@ var animatieButton = document.querySelector('button');
 
 // Functie om een animatie te laden
 function laadAnimatieButton(animatiePathButton, loopPathButton, callback) {
-    // Controleer of animation is geïnitialiseerd
-    if (animationButton) {
-        animationButton.destroy(); // Vernietig de huidige animatie
-    }
-    
     // Laad de nieuwe animatie
+    if (animationButton) {
+        animationButton.destroy(); // Vernietig de huidige animatie als deze bestaat
+    }
+
     animationButton = bodymovin.loadAnimation({
         container: document.getElementById('animbutton'),
         renderer: 'svg',
         loop: false, // Speel de animatie één keer af
         autoplay: true,
-        path: animatiePathButton//misschen aanpassen
+        path: animatiePathButton
     });
 
     // Callback wanneer de animatie eindigt
     animationButton.addEventListener('complete', function () {
+        // Start de loop-animatie
         animationButton.destroy(); // Vernietig de huidige animatie
         animationButton = bodymovin.loadAnimation({
             container: document.getElementById('animbutton'),
@@ -66,7 +66,7 @@ function startVolgendeAnimatieButton() {
     if (huidigeToestand < animatiesButtonLijst.length) {
         var huidigeAnimatieButton = animatiesButtonLijst[huidigeToestand];
 
-        // Laad de animatie
+        // Laad de nieuwe button-animatie
         laadAnimatieButton(huidigeAnimatieButton.path, huidigeAnimatieButton.loopPath);
 
         // Ga naar de volgende toestand
@@ -74,8 +74,14 @@ function startVolgendeAnimatieButton() {
     } else {
         // Reset naar het begin
         huidigeToestand = 0;
+
+        // Laad de eerste animatie opnieuw
+        var eersteAnimatie = animatiesButtonLijst[huidigeToestand];
+        laadAnimatieButton(eersteAnimatie.path, eersteAnimatie.loopPath);
     }
 }
+
+
 
 // Voeg een eventlistener toe aan de knop
 animatieButton.addEventListener('click', startVolgendeAnimatieButton);
