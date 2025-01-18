@@ -29,7 +29,7 @@ var animatieButton = document.querySelector('button');
 
 
 // Functie om een animatie te laden
-function laadAnimatieButton(animatiePath, loopPath, callback) {
+function laadAnimatieButton(animatiePathButton, loopPathButton, callback) {
     // Controleer of animation is geïnitialiseerd
     if (animationButton) {
         animationButton.destroy(); // Vernietig de huidige animatie
@@ -41,7 +41,7 @@ function laadAnimatieButton(animatiePath, loopPath, callback) {
         renderer: 'svg',
         loop: false, // Speel de animatie één keer af
         autoplay: true,
-        path: animatiePath//misschen aanpassen
+        path: animatiePathButton//misschen aanpassen
     });
 
     // Callback wanneer de animatie eindigt
@@ -52,7 +52,7 @@ function laadAnimatieButton(animatiePath, loopPath, callback) {
             renderer: 'svg',
             loop: true, // Herhaal de loop-versie van de animatie
             autoplay: true,
-            path: loopPath
+            path: loopPathButton
         });
 
         // Als er een extra callback is, voer deze uit
