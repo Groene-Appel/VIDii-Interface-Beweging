@@ -10,7 +10,7 @@ var animaties = [
     {
         path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem/2_blixem.json',
         loopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/2_blixem_loop/2_blixem_loop.json',
-        tekst: 'O nee, wat is er gebeurt met blub de vis? Laten we hem wakker maken!',
+        tekst: 'Gelukkig, er zit weer wat leven in blub, maar blub gaat veel te snel!',
         knopText: 'Animatie 1',
         buttonPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/1_blixem_icoon/blixem_icoon.json',
         buttonLoopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/1_blixem_icoon_loop/blixem_icoon_loop.json'
@@ -18,7 +18,7 @@ var animaties = [
     {
         path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/3_frozen/3_frozen.json',
         loopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/3_frozen_loop/3_frozen_loop.json',
-        tekst: 'Gelukkig, er zit weer wat leven in blub, maar blub gaat veel te snel!',
+        tekst: 'Blub is nu vast, laten we het ijs opwarmen!',
         knopText: 'Animatie 2',
         buttonPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/2_frozen_icoon/frozen_icoon.json',
         buttonLoopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/2_frozen_icoon_loop/frozen_icoon_loop.json'
@@ -26,7 +26,7 @@ var animaties = [
     {
         path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/4_verdamping/4_verdamping.json',
         loopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/4_verdamping_loop/4_verdamping_loop.json',
-        tekst: 'Blub is nu vast, laten we het ijs opwarmen!',
+        tekst: 'O nee, al het water verdampt! Snel, voordat Blub geen zuurstof meer heeft!',
         knopText: 'Animatie 3',
         buttonPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/3_verdamping_icoon/verdamping_icoon.json',
         buttonLoopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/3_verdamping_icoon_loop/verdamping_icoon_loop.json'
@@ -34,10 +34,10 @@ var animaties = [
     {
         path: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/5_regen/5_regen.json',
         loopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animaties/5_regen_loop/5_regen_loop.json',
-        tekst: 'O nee, al het water verdampt! Snel, voordat Blub geen zuurstof meer heeft!',
+        tekst: 'Kijk eens aan nu, nu heeft blub eindelijk wat rust',
         knopText: 'Animatie 4',
         buttonPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/4_regen_icoon/regen_icoon.json',
-        buttonLoopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/4_regen_icoon_loop/regen_icoon_loop.json'
+        buttonLoopPath: 'https://groene-appel.github.io/VIDii-Interface-Beweging/script/animatie_icoons/4_regen_icoon_loop/regen_loop.json'
     }
 ];
 
@@ -122,7 +122,7 @@ function startVolgendeAnimatie() {
     } else {
         // Reset naar het begin
         verhaalTekst.textContent = 'Gelukkig, alles is nu goed! Blub leefde nog een goed leven tot zijn 80ste in vissenjaren.';
-        animatieButton.textContent = 'Herstart';
+        animatieButton.textContent = 'reset';
         huidigeToestand = 0;
     }
 }
